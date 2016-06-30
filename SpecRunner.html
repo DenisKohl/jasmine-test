@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.4.1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+
+  <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+  <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.4.1/boot.js"></script>
+  <script src="js/work.js"> </script>
+  
+  
+
+</head>
+
+<body>
+	<script>
+		durchschnitt(zahlen);
+		/*describe("",function(){
+	  		it("",function(){
+		  		expect().
+	  		});
+  		});*/
+		
+		var str = "Apfel Birne Kirsche";
+		var t1 = true;
+		describe("Ein Beispiel", function() {
+			it("hier testen wir eine expect", function() {
+			expect(t1).toBe(true);
+  		});
+  		});
+  		describe("Rechnet JS richtig",function(){
+	  		it("Hier testen wir das Ergebnis eine function", function(){
+		  		expect(addZahlen(7,5)).toEqual(12);
+	  		});
+  		});
+  		describe("neue function",function(){
+	  		it("Hier testen wir das Ergebnis eine function", function(){
+		  		expect(durchschnitt(zahlen)).toEqual(5);
+	  		});
+  		});
+  		describe("Regex Test: Apfel Birne Kirsche ", function() {
+			it("Test: Birne", function() {
+			expect(str).toMatch(/Birne/);
+			});
+			it("Test: Kirsche", function() {
+			expect(str).toMatch(/Kirsche/);
+			});
+			it("Test: Apfel", function() {
+			expect(str).toMatch(/Apfel/);
+			});
+			it("Test: Wurm", function() {
+			expect(str).not.toMatch(/Wurm/);
+			});
+  		});
+  		describe("Schatz bist du da", function() {
+	  		var schatz = {
+		  		blei: "da"
+	  		}
+	  		
+	  		it("Wo ist das Gold", function(){
+		  		expect(schatz.gold).toBeUndefined();
+	  		});
+	  		it("Es gibt wieder nur blei", function(){
+		  		expect(schatz.blei).not.toBeUndefined();
+	  		});
+  		});
+  		describe("Gibt es hier eine Holzmichel", function(){
+	  		var lied = "Lebt der Holzmichel noch";
+	  		it("Wo ist der Holzmichel", function(){
+		  		expect(lied).toContain("Holzmichel");
+	  		});
+  		});
+  		var pi = 3.1415926;
+	  	var z = 2.34;
+  		describe("Kleiner als Pi",function(){
+	  		
+	  		it("2,34",function(){
+		  		expect(z).toBeLessThan(pi);
+		  		
+	  		});
+	  		it("Pi ist näher an 3 als an 6",function(){
+		  		expect(pi).toBeCloseTo(3.0,0);
+		  	});
+  		});
+  		/*describe("Wir bauen uns eine Spion",function(){
+	  		var per = null;
+	  		beforeEach(function(){
+		  		per = new Person("Hans", "Maurer", 34);
+		  		spyOn(per, 'strBeruf');
+	  		});
+	  		per.strBeruf();
+	  		per.strBeruf();
+	  		per.strBeruf();
+	  		it("trace Function ",function(){
+		  		expect(per.strBeruf).toHaveBeenCalled();
+	  		});
+  		});*/
+  		/* describe("alernative",function(){
+	  		 var foo, bar = null;
+
+	  		 beforeEach(function() {
+	  		 foo = {
+	  		 	setBar: function(value) {
+	  		 	bar = value;
+      			}
+    		};
+
+			spyOn(foo, 'setBar');
+
+			foo.setBar(123);
+			foo.setBar(456, 'another param');
+			});
+	  		it("spy test",function(){
+		  		expect(foo.setBar()).toHaveBeenCalled();
+	  		});
+  		});*/
+  		/*describe("",function(){
+	  		it("",function(){
+		  		expect().
+	  		});
+  		});*/
+	</script>
+</body>
+</html>
